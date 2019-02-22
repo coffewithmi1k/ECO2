@@ -8,4 +8,5 @@ public class EndPoints {
      * ***********************
      */
     public final static String companies = "companies";
+    public final static String myGroups = "mygroups";
 }

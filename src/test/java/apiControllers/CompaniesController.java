@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 
 public class CompaniesController extends Configuration {
 
-    int companyID;
+    String companyID;
 
     @Step("Get all Companies")
     public void getAllCompanies() {
@@ -28,29 +28,16 @@ public class CompaniesController extends Configuration {
                         .body(body)
                         .when().post(EndPoints.companies);
         response.then().statusCode(200);
+     //  companyID = response.body().
+        System.out.println("Here is your company ID"+companyID);
     }
 
     @Step("Edit Company")
-    public void editCompany() {
-        String editCompany = "{\n" +
-                "  \"contacts\": [],\n" +
-                "  \"id\": 1865,\n" +
-                "  \"name\": \"1\",\n" +
-                "  \"businessID\": \"\",\n" +
-                "  \"city\": null,\n" +
-                "  \"zipCode\": null,\n" +
-                "  \"organizationNumber\": \"122-112\",\n" +
-                "  \"countryID\": null,\n" +
-                "  \"indirectOwnerID\": null,\n" +
-                "  \"notes\": null,\n" +
-                "  \"isVendor\": false,\n" +
-                "  \"mamutVendorNo\": null,\n" +
-                "  \"countryName\": \"Lviv\",\n" +
-                "  \"street\": null,\n" +
-                "  \"lastUpdatedAt\": \"2018-06-18T08:47:33.197Z\",\n" +
-                "  \"updatedBy\": \"coffe!\"\n" +
-                "}";
-
-
+    public void editCompany(String body) {
+        Response response =
+                given().header("Authorization", getToken())
+                        .body(body)
+                        .when().put(EndPoints.companies);
+        response.then().statusCode(200);
     }
 }

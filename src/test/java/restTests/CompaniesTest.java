@@ -24,7 +24,7 @@ CompaniesJsons companyJson = new CompaniesJsons();
 
 @Test
     public void checkEditCompany(){
-
+companiesController.editCompany(companyJson.getEditCompany());
 }
 @Test
     public void checkDeleteCompany(){
@@ -32,7 +32,7 @@ CompaniesJsons companyJson = new CompaniesJsons();
 }
 
 @Test
-    public void checkSPecificCompany(){
+    public void checkSpecificCompany(){
 
 }
 }

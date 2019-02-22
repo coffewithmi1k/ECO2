@@ -5,6 +5,7 @@
     <test name="Tests ECO">
     <classes>
     <class name="restTests.CompaniesTest"/>
+        <class name="restTests.GroupsTest"/>
 </classes>
 </test>
 </suite>
