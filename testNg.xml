@@ -4,7 +4,7 @@
         <suite verbose="2" name="Cucumber Framework">
     <test name="Tests ECO">
     <classes>
-    <class name="test.exampleTest"/>
+    <class name="restTests.CompaniesTest"/>
 </classes>
 </test>
 </suite>
