@@ -14,6 +14,7 @@ public class GroupController extends Configuration {
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.myGroups);
-        response.then().statusCode(200);
+        response
+                .then().statusCode(200);
     }
 }

@@ -4,6 +4,7 @@ import configuration.Configuration;
 import configuration.EndPoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import org.junit.experimental.theories.suppliers.TestedOn;
 import org.testng.annotations.Test;
 import test.ExampleEndPoints;
 
@@ -28,7 +29,7 @@ public class CompaniesController extends Configuration {
                         .body(body)
                         .when().post(EndPoints.companies);
         response.then().statusCode(200);
-     //  companyID = response.body().
+     companyID = response.getBody().asString();
         System.out.println("Here is your company ID"+companyID);
     }
 
@@ -39,5 +40,10 @@ public class CompaniesController extends Configuration {
                         .body(body)
                         .when().put(EndPoints.companies);
         response.then().statusCode(200);
+    }
+
+    @Step("Delete Company")
+    public void CheckDeleteCompany(String ID){
+        
     }
 }
