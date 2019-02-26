@@ -6,6 +6,7 @@
     <classes>
 
         <class name="restTests.GroupsTest"/>
+        <class name="restTests.CompaniesTest"/>
 </classes>
 </test>
 </suite>

@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class CompaniesController extends Configuration {
 
-    String companyID;
+
 
     @Step("Get all Companies")
     public void getAllCompanies() {
@@ -23,14 +23,15 @@ public class CompaniesController extends Configuration {
     }
 
     @Step("Create Company")
-    public void createCompany(String body) {
+    public String createCompany(String body) {
         Response response =
                 given().header("Authorization", getToken())
                         .body(body)
                         .when().post(EndPoints.companies);
         response.then().statusCode(200);
-     companyID = response.getBody().asString();
-        System.out.println("Here is your company ID"+companyID);
+
+    String  companyID = response.getBody().asString();
+        return  companyID;
     }
 
     @Step("Edit Company")
@@ -44,6 +45,6 @@ public class CompaniesController extends Configuration {
 
     @Step("Delete Company")
     public void CheckDeleteCompany(String ID){
-        
+
     }
 }

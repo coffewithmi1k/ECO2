@@ -19,7 +19,8 @@ CompaniesJsons companyJson = new CompaniesJsons();
 
 @Test
     public void checkCreateNewCompany(){
-    companiesController.createCompany(companyJson.getAddNewCompany());
+   String companyID= companiesController.createCompany(companyJson.getAddNewCompany());
+   System.out.println(companyID+"Nice!!!!");
 }
 
 @Test
