@@ -25,11 +25,11 @@ CompaniesJsons companyJson = new CompaniesJsons();
 
 @Test
     public void checkEditCompany(){
-companiesController.editCompany(companyJson.getEditCompany());
+
 }
 @Test
     public void checkDeleteCompany(){
-
+companiesController.CheckDeleteCompany();
 }
 
 @Test

@@ -18,8 +18,24 @@ public String getAddNewCompany() {
             "}";
     return addNewCompany;
 }
-    public String getEditCompany(){
-    String editCompany ="";
-    return editCompany;
-    }
+
+public String getNewFact(){
+    String addNewFact ="{\n" +
+            "  \"factName\": \"Coffe"+getDate()+"\",\n" +
+            "  \"valueType\": \"Number\",\n" +
+            "  \"applicableTechnologyCodes\": null,\n" +
+            "  \"applicableFuelCodes\": null\n" +
+            "}";
+    return addNewFact;
+}
+public String getNewLabel(){
+    String addNewLabel ="{\n" +
+            "  \"code\": \"CoffeLabel"+getDate()+"\",\n" +
+            "  \"category\": null,\n" +
+            "  \"description\": null,\n" +
+            "  \"hasValidityRange\": false,\n" +
+            "  \"hasApplicability\": false\n" +
+            "}";
+    return addNewLabel;
+}
 }

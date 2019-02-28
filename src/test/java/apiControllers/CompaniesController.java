@@ -6,13 +6,14 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.junit.experimental.theories.suppliers.TestedOn;
 import org.testng.annotations.Test;
+import resources.CompaniesJsons;
 import test.ExampleEndPoints;
 
 import static io.restassured.RestAssured.given;
 
 public class CompaniesController extends Configuration {
 
-
+CompaniesJsons companiesJsons = new CompaniesJsons();
 
     @Step("Get all Companies")
     public void getAllCompanies() {
@@ -44,7 +45,12 @@ public class CompaniesController extends Configuration {
     }
 
     @Step("Delete Company")
-    public void CheckDeleteCompany(String ID){
-
+    public void CheckDeleteCompany(){
+        String companyID = createCompany(companiesJsons.getAddNewCompany());
+        Response response =
+                given().header("Authorization", getToken())
+                        .when().delete(EndPoints.companies+companyID);
+        response.then().statusCode(200);
+System.out.println("Company is deleted with ID "+companyID);
     }
 }
