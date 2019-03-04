@@ -6,7 +6,7 @@
         <packages>
         </packages>
     <classes>
-        <class name="restTests.AgreementsTest"/>
+        <class name="restTests.LocationTest"/>
 </classes>
 </test>
 </suite>
