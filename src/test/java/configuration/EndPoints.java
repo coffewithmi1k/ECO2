@@ -11,4 +11,6 @@ public class EndPoints {
     public final static String myGroups = "mygroups/";
     public final static String featureFacts = "featurefacts/";
     public final static String labels = "labels/";
+    public final static String certificatesStatistics = "certificates/statistics/";
+    public final static String agreements = "agreements/";
 }

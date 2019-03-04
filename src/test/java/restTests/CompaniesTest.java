@@ -24,10 +24,6 @@ CompaniesJsons companyJson = new CompaniesJsons();
 }
 
 @Test
-    public void checkEditCompany(){
-
-}
-@Test
     public void checkDeleteCompany(){
 companiesController.CheckDeleteCompany();
 }

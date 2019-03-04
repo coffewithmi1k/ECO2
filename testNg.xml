@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-        <suite verbose="2" name="Cucumber Framework">
+        <suite verbose="2" name="Rest Assured Framework">
     <test name="Tests ECO">
         <packages>
-            <package name="restTests"/>
         </packages>
     <classes>
+        <class name="restTests.AgreementsTest"/>
 </classes>
 </test>
 </suite>

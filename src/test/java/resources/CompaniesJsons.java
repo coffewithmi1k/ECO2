@@ -38,4 +38,33 @@ public String getNewLabel(){
             "}";
     return addNewLabel;
 }
+public String getNewAgreement(){
+    String addNewAgreement ="{\"masterDistributionRules\":\"{\\\"current\\\":[0,0,0,0,0,0,0,0,0,0,0,0]," +
+            "\\\"future\\\":[0,0,0,0,0,0,0,0,0,0,0,0]}\"," +
+            "\"vendorAgreementsProductionDevices\":[]," +
+            "\"startDate\":\"2019-03-03T00:00:00.000Z\"," +
+            "\"endDate\":null,\"reconciliationFrequency\":1," +
+            "\"type\":1," +
+            "\"vendorID\":2984," +
+            "\"vendor\":{\"contacts\":[]," +
+            "\"id\":2984," +
+            "\"name\":\"# new\"," +
+            "\"businessID\":\"\"," +
+            "\"city\":\"\"," +
+            "\"zipCode\":\"\",\"organizationNumber\":\"\"," +
+            "\"countryID\":3," +
+            "\"indirectOwnerID\":null," +
+            "\"notes\":\"\"," +
+            "\"isVendor\":false," +
+            "\"erpVendorID\":null," +
+            "\"erpCustomerID\":2200," +
+            "\"category1\":null," +
+            "\"category2\":null," +
+            "\"countryName\":\"Algeria\"," +
+            "\"street\":\"\"," +
+            "\"paymentTerms\":21," +
+            "\"lastUpdatedAt\":\"2019-02-26T09:37:17.603Z\"," +
+            "\"updatedBy\":\"ykurylo\"}}";
+    return addNewAgreement;
+}
 }
