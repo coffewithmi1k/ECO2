@@ -14,4 +14,5 @@ public class EndPoints {
     public final static String certificatesStatistics = "certificates/statistics/";
     public final static String agreements = "agreements/";
     public final static String location = "location/";
+    public final static String sourcingOrders = "orders/sourcing/";
 }
