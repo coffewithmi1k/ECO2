@@ -67,4 +67,54 @@ public String getNewAgreement(){
             "\"updatedBy\":\"ykurylo\"}}";
     return addNewAgreement;
 }
+
+public String getNewSourcingOrder(){
+    String newSourcingOrder ="{\n" +
+            "  \"orderLines\": [],\n" +
+            "  \"serviceLines\": [],\n" +
+            "  \"totalOrderedSum\": 0,\n" +
+            "  \"totalReceivedSum\": 0,\n" +
+            "  \"currencyCode\": \"EUR\",\n" +
+            "  \"statusID\": 0,\n" +
+            "  \"createdDate\": \"2019-03-06T00:00:00.000Z\",\n" +
+            "  \"isLineUpdated\": false,\n" +
+            "  \"isMainUpdated\": false,\n" +
+            "  \"supplierID\": 2989,\n" +
+            "  \"supplier\": {\n" +
+            "    \"contacts\": [],\n" +
+            "    \"id\": 2989,\n" +
+            "    \"name\": \"133\",\n" +
+            "    \"businessID\": \"\",\n" +
+            "    \"city\": \"\",\n" +
+            "    \"zipCode\": \"\",\n" +
+            "    \"organizationNumber\": \"\",\n" +
+            "    \"countryID\": null,\n" +
+            "    \"indirectOwnerID\": null,\n" +
+            "    \"notes\": \"\",\n" +
+            "    \"isVendor\": false,\n" +
+            "    \"erpVendorID\": null,\n" +
+            "    \"erpCustomerID\": null,\n" +
+            "    \"category1\": \"\",\n" +
+            "    \"category2\": \"\",\n" +
+            "    \"countryName\": \"\",\n" +
+            "    \"street\": \"\",\n" +
+            "    \"paymentTerms\": null,\n" +
+            "    \"lastUpdatedAt\": \"2019-03-05T15:57:01.247Z\",\n" +
+            "    \"updatedBy\": \"ykurylo\"\n" +
+            "  },\n" +
+            "  \"contactPersonID\": null,\n" +
+            "  \"contactPerson\": null,\n" +
+            "  \"brokerCompanyID\": null,\n" +
+            "  \"ecohzContactPersonID\": null,\n" +
+            "  \"erpOrderID\": null,\n" +
+            "  \"exchangeRate\": \"4.5255\",\n" +
+            "  \"expectedDate\": null,\n" +
+            "  \"paymentTerms\": null,\n" +
+            "  \"ecohzReference\": null,\n" +
+            "  \"comments\": null,\n" +
+            "  \"isControlled\": false,\n" +
+            "  \"isBroker\": false\n" +
+            "}";
+    return newSourcingOrder;
+}
 }
