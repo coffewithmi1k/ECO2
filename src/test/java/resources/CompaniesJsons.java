@@ -117,4 +117,37 @@ public String getNewSourcingOrder(){
             "}";
     return newSourcingOrder;
 }
+
+public String addNewSalesOrder(){
+    String addNewSalesOrder="{\n" +
+            "  \"orderLines\": [],\n" +
+            "  \"serviceLines\": [],\n" +
+            "  \"totalOrderedSum\": 0,\n" +
+            "  \"totalOrderedVolume\": 0,\n" +
+            "  \"totalDeliveredSum\": 0,\n" +
+            "  \"statusID\": 1,\n" +
+            "  \"orderedDate\": \"2019-03-07T00:00:00.000Z\",\n" +
+            "  \"margin\": 0.2,\n" +
+            "  \"invoiceStatus\": 1,\n" +
+            "  \"invoiceStatusLabel\": \"Not Ready\",\n" +
+            "  \"nextInvoiceDate\": null,\n" +
+            "  \"nextDeliveryDate\": null,\n" +
+            "  \"isLineUpdated\": false,\n" +
+            "  \"isMainUpdated\": false,\n" +
+            "  \"customerCompanyID\": null,\n" +
+            "  \"customer\": null,\n" +
+            "  \"brokerCompanyID\": null,\n" +
+            "  \"contactPersonID\": null,\n" +
+            "  \"contactPerson\": null,\n" +
+            "  \"ecohzContactPersonID\": null,\n" +
+            "  \"erpOrderID\": null,\n" +
+            "  \"validityDate\": null,\n" +
+            "  \"paymentTerms\": null,\n" +
+            "  \"ecohzReference\": null,\n" +
+            "  \"comments\": null,\n" +
+            "  \"isControlled\": false,\n" +
+            "  \"isBroker\": false\n" +
+            "}";
+    return addNewSalesOrder;
+}
 }
