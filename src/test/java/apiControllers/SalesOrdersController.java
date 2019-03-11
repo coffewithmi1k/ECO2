@@ -40,13 +40,5 @@ public class SalesOrdersController extends Configuration {
         String orderID = response.getBody().asString();
         return  orderID;
     }
-    @Step("Delete newly created sales order")
-    public void deleteNewlyCreatedSalesOrder(){
-        String orderID = createNewSalesOrder(companiesJsons.addNewSalesOrder());
-        Response response =
-                given().header("Authorization", getToken())
-                        .when().delete(EndPoints.salesOrders+orderID);
-        response
-                .then().statusCode(200);
-    }
+
 }
