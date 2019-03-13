@@ -53,4 +53,11 @@ CompaniesJsons companiesJsons = new CompaniesJsons();
         response.then().statusCode(200);
 System.out.println("Company is deleted with ID "+companyID);
     }
+    @Step("Get specific company")
+    public void getSpecificCompany(int ID){
+        Response response =
+                given().header("Authorization", getToken())
+                        .when().get(EndPoints.companies+ID);
+        response.then().statusCode(200);
+    }
 }

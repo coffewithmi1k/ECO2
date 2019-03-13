@@ -4,9 +4,12 @@ import configuration.Configuration;
 import org.testng.annotations.Test;
 import resources.CompaniesJsons;
 
+import java.io.File;
+
 public class AgreementsTest extends Configuration {
 
     AgreementsController agreementsController = new AgreementsController();
+    File setProductionDeviceInAgreement = new File("src\\test\\java\\resources\\SetProductionDeviceInAgreement.json");
 
 CompaniesJsons companiesJsons = new CompaniesJsons();
     @Test
@@ -27,7 +30,7 @@ CompaniesJsons companiesJsons = new CompaniesJsons();
     }
     @Test
     public void setProductionDeviceInAgreement(){
-        agreementsController.setProductionDeviceInAgreement();
+        agreementsController.setProductionDeviceInAgreement(setProductionDeviceInAgreement);
 
     }
 

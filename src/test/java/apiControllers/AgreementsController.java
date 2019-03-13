@@ -7,11 +7,14 @@ import resources.CompaniesJsons;
 
 import configuration.Configuration;
 
+import java.io.File;
+
 import static io.restassured.RestAssured.given;
 
 public class AgreementsController extends Configuration {
 
     CompaniesJsons companiesJsons = new CompaniesJsons();
+
 
     @Step("Get all agreements")
     public void getAllAgreeements(){
@@ -46,7 +49,11 @@ String agreementID = createAgreement(companiesJsons.getNewAgreement());
         response.then().statusCode(200);
     }
     @Step("Set Production Device in Agreement")
-    public void setProductionDeviceInAgreement(){
-
+    public void setProductionDeviceInAgreement(File file){
+        Response response =
+                given().header("Authorization", getToken())
+                        .body(file)
+                        .when().put(EndPoints.agreements);
+        response.then().statusCode(200);
     }
 }
