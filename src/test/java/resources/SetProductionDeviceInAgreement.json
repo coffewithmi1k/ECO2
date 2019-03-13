@@ -1,0 +1,370 @@
+{
+    "id": 182,
+    "vendorID": 2870,
+    "vendor": {
+        "contacts": [
+            {
+                "id": 365,
+                "name": "asd",
+                "email": "asdasd@mail.com",
+                "phone": "123",
+                "jobTitle": "asd",
+                "notes": "12313",
+                "companyId": 2870
+            }
+        ],
+        "id": 2870,
+        "name": "24.01CoffeCompany1",
+        "businessID": "",
+        "city": "city",
+        "zipCode": "zip code",
+        "organizationNumber": "organiz nu,mber",
+        "countryID": 160,
+        "indirectOwnerID": null,
+        "notes": "some notes",
+        "isVendor": false,
+        "erpVendorID": null,
+        "erpCustomerID": 555,
+        "category1": "D 15",
+        "category2": "cat2",
+        "countryName": "Norway",
+        "street": "street",
+        "paymentTerms": 7,
+        "lastUpdatedAt": "2019-03-13T08:38:16.877Z",
+        "updatedBy": "ykurylo"
+    },
+    "startDate": "2018-11-01T00:00:00.000Z",
+    "endDate": null,
+    "type": 2,
+    "masterDistributionRules": "{\"current\":[0,0,0,0,0,0,0,0,0,0,0,0],\"future\":[0,0,0,0,0,0,0,0,0,0,0,0]}",
+    "reconciliationFrequency": 8,
+    "lastUpdatedAt": "2019-03-13T13:14:34.913Z",
+    "updatedBy": "ykurylo",
+    "vendorAgreementsProductionDevices": [
+        {
+            "selectedClassificationType": null,
+            "productionDeviceID": 21868,
+            "productionDevice": null,
+            "vendorShare": 0.11,
+            "distributionRules": "[{\"current\":[0,0,0,0,0,0,0,0,0,0,0,0],\"future\":[0,0,0,0,0,0,0,0,0,0,0,0],\"сlassificationType\":0},{\"current\":[0,0,0,0,0,0,0,0,0,0,0,0],\"future\":[0,0,0,0,0,0,0,0,0,0,0,0],\"сlassificationType\":1}]",
+            "sourcingOrderID": null,
+            "lastUpdatedAt": null,
+            "vendorReconciliation": null,
+            "weeklyProduction": [
+                {
+                    "month": 1,
+                    "week": 1,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 1,
+                    "week": 2,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 1,
+                    "week": 3,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 1,
+                    "week": 4,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 2,
+                    "week": 5,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 2,
+                    "week": 6,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 2,
+                    "week": 7,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 2,
+                    "week": 8,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 3,
+                    "week": 9,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 3,
+                    "week": 10,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 3,
+                    "week": 11,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 3,
+                    "week": 12,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 3,
+                    "week": 13,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 4,
+                    "week": 14,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 4,
+                    "week": 15,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 4,
+                    "week": 16,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 4,
+                    "week": 17,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 5,
+                    "week": 18,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 5,
+                    "week": 19,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 5,
+                    "week": 20,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 5,
+                    "week": 21,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 5,
+                    "week": 22,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 6,
+                    "week": 23,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 6,
+                    "week": 24,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 6,
+                    "week": 25,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 6,
+                    "week": 26,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 7,
+                    "week": 27,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 7,
+                    "week": 28,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 7,
+                    "week": 29,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 7,
+                    "week": 30,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 8,
+                    "week": 31,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 8,
+                    "week": 32,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 8,
+                    "week": 33,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 8,
+                    "week": 34,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 8,
+                    "week": 35,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 9,
+                    "week": 36,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 9,
+                    "week": 37,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 9,
+                    "week": 38,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 9,
+                    "week": 39,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 10,
+                    "week": 40,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 10,
+                    "week": 41,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 10,
+                    "week": 42,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 10,
+                    "week": 43,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 11,
+                    "week": 44,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 11,
+                    "week": 45,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 11,
+                    "week": 46,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 11,
+                    "week": 47,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 11,
+                    "week": 48,
+                    "estimatedVolume": 22,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 12,
+                    "week": 49,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 12,
+                    "week": 50,
+                    "estimatedVolume": 28,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 12,
+                    "week": 51,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                },
+                {
+                    "month": 12,
+                    "week": 52,
+                    "estimatedVolume": 27,
+                    "actualVolume": 0
+                }
+            ],
+            "vendorAgreement": null
+        }
+    ]
+}

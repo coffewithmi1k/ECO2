@@ -56,7 +56,7 @@ public void getAllProductionDevices(){
 }
 @Step("Delete newly created Production Device")
     public void deleteNewlyCreatedProductionDevice(){
-    
+
 }
 
 }
