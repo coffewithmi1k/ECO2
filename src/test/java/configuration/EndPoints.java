@@ -16,5 +16,5 @@ public class EndPoints {
     public final static String location = "location/";
     public final static String sourcingOrders = "orders/sourcing/";
     public final static String salesOrders = "orders/sales/";
-    public final static String productionDevices = "/api/productiondevices/";
+    public final static String productionDevices = "productiondevices/";
 }
