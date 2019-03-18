@@ -17,4 +17,5 @@ public class EndPoints {
     public final static String sourcingOrders = "orders/sourcing/";
     public final static String salesOrders = "orders/sales/";
     public final static String productionDevices = "productiondevices/";
+    public final static String portfolioGroups = "groups/";
 }
