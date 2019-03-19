@@ -9,7 +9,7 @@ public String getAddNewCompany() {
     String addNewCompany = "{\n" +
             "  \"contacts\": [],\n" +
             "  \"isVendor\": false,\n" +
-            "  \"name\": \"Coffe11" + getDate() + "\",\n" +
+            "  \"name\": \"Coffe" + getDate() +getRandomNumber()+ "\",\n" +
             "  \"street\": \"Park Avenue 13\",\n" +
             "  \"zipCode\": \"111222\",\n" +
             "  \"organizationNumber\": \"111\",\n" +
