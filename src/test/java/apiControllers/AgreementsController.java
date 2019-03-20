@@ -10,6 +10,8 @@ import configuration.Configuration;
 import java.io.File;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItems;
 
 public class AgreementsController extends Configuration {
 
@@ -22,6 +24,20 @@ public class AgreementsController extends Configuration {
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.agreements);
         response.then().statusCode(200);
+       // response.prettyPeek();
+        response.then().body("name", equalTo("ID"));
+        //System.out.println(response.path("Your value is"+response.path("body.name")));
+
+        /**************
+         *
+         * check response styles;;;;;;;;;;;
+         * ***********************************
+         */
+
+
+
+
+
     }
     @Step("Get specific agreement")
     public void getSpecificAgreement(int id){
