@@ -16,7 +16,7 @@ public class SalesOrdersTest extends Configuration {
 
     @Test
     public void checkSpecificSalesOrder() {
-        salesOrdersController.getSpecificOrder(41674);
+        salesOrdersController.getSpecificOrder(41787);
     }
 
     @Test

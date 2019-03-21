@@ -17,7 +17,7 @@ public class FeatureFactsTest extends Configuration {
 
     @Test
     public void checkSpecificFact(){
-        featureFactsController.getSpecificFact(51);
+        featureFactsController.getSpecificFact(81);
     }
 
     @Test

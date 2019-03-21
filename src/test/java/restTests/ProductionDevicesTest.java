@@ -20,7 +20,7 @@ public class ProductionDevicesTest extends Configuration {
     }
     @Test
     public void checkGetProductionDeviceByID(){
-        productionDevicesController.getProductionDeviceByID(21708);
+        productionDevicesController.getProductionDeviceByID(29677);
     }
     @Test
     public void checkGetProductionDeviceByGsrn(){

@@ -1,6 +1,6 @@
 {
-    "id": 182,
-    "vendorID": 2870,
+    "id": 213,
+    "vendorID": 3018,
     "vendor": {
         "contacts": [
             {
@@ -10,15 +10,15 @@
                 "phone": "123",
                 "jobTitle": "asd",
                 "notes": "12313",
-                "companyId": 2870
+                "companyId": 3018
             }
         ],
-        "id": 2870,
-        "name": "24.01CoffeCompany1",
+        "id": 3018,
+        "name": "21.03CoffeCompany",
         "businessID": "",
         "city": "city",
         "zipCode": "zip code",
-        "organizationNumber": "organiz nu,mber",
+        "organizationNumber": "organiz number",
         "countryID": 160,
         "indirectOwnerID": null,
         "notes": "some notes",
@@ -43,7 +43,7 @@
     "vendorAgreementsProductionDevices": [
         {
             "selectedClassificationType": null,
-            "productionDeviceID": 21868,
+            "productionDeviceID": 29677,
             "productionDevice": null,
             "vendorShare": 0.11,
             "distributionRules": "[{\"current\":[0,0,0,0,0,0,0,0,0,0,0,0],\"future\":[0,0,0,0,0,0,0,0,0,0,0,0],\"сlassificationType\":0},{\"current\":[0,0,0,0,0,0,0,0,0,0,0,0],\"future\":[0,0,0,0,0,0,0,0,0,0,0,0],\"сlassificationType\":1}]",
