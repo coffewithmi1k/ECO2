@@ -2,16 +2,18 @@ package apiControllers;
 import configuration.EndPoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import org.json.JSONArray;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import resources.CompaniesJsons;
 
 import configuration.Configuration;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasItems;
+import static org.hamcrest.Matchers.*;
 
 public class AgreementsController extends Configuration {
 
@@ -23,10 +25,16 @@ public class AgreementsController extends Configuration {
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.agreements);
-        response.then().statusCode(200);
+        response.then().statusCode(200).body("id[0]", equalTo(212))
+                .body("id", hasItems(212,214))
+                .body("vendorID", hasItems(3018))
+                .body("vendor.name",hasItems("Ecohz AS"));
+
+
+
        // response.prettyPeek();
-        response.then().body("name", equalTo("ID"));
-        //System.out.println(response.path("Your value is"+response.path("body.name")));
+       // response.then().body("name", equalTo("ID"));
+        JSONArray JSONResponseBody = new   JSONArray(response.body().asString());
 
         /**************
          *
