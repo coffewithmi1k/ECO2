@@ -30,29 +30,18 @@ public class AgreementsController extends Configuration {
                 .body("vendorID", hasItems(3018))
                 .body("vendor.name",hasItems("Ecohz AS"));
 
-
-
-       // response.prettyPeek();
-       // response.then().body("name", equalTo("ID"));
-        JSONArray JSONResponseBody = new   JSONArray(response.body().asString());
-
-        /**************
-         *
-         * check response styles;;;;;;;;;;;
-         * ***********************************
-         */
-
-
-
-
-
     }
     @Step("Get specific agreement")
     public void getSpecificAgreement(int id){
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.agreements+id);
-        response.then().statusCode(200);
+        response.then().statusCode(200)
+                .body("id", equalTo(213))
+                .body("vendorID",equalTo(3018))
+                .body("vendor.name",equalTo("21.03CoffeCompany"))
+                .body("vendorAgreementsProductionDevices.productionDeviceID",hasItem(29677));
+
     }
     @Step("Create agreement")
     public String createAgreement(String body){
@@ -60,7 +49,8 @@ public class AgreementsController extends Configuration {
                 given().header("Authorization", getToken())
                         .body(body)
                         .when().post(EndPoints.agreements);
-        response.then().statusCode(200);
+        response.then().statusCode(200)
+                .body(notNullValue());
         String agreementID = response.getBody().asString();
         return agreementID;
     }
@@ -70,7 +60,9 @@ String agreementID = createAgreement(companiesJsons.getNewAgreement());
         Response response =
                 given().header("Authorization", getToken())
                         .when().delete(EndPoints.agreements+agreementID);
-        response.then().statusCode(200);
+        System.out.println("Here is your response"+response.getBody().asString());
+        response.then().statusCode(200)
+                .body(isEmptyOrNullString());
     }
     @Step("Set Production Device in Agreement")
     public void setProductionDeviceInAgreement(File file){
@@ -79,5 +71,7 @@ String agreementID = createAgreement(companiesJsons.getNewAgreement());
                         .body(file)
                         .when().put(EndPoints.agreements);
         response.then().statusCode(200);
+        System.out.println("Here is your response"+response.getBody().asString());
+
     }
 }
