@@ -19,7 +19,7 @@ CompaniesJsons companiesJsons = new CompaniesJsons();
     public void getAllCompanies() {
         Response response =
                 given().header("Authorization", getToken())
-                        .when().get(EndPoints.companies);
+                        .when().get(EndPoints.companies).prettyPeek();
         response.then().statusCode(200);
     }
 
