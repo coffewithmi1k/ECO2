@@ -20,8 +20,8 @@ public class CertificateStatisticsController extends Configuration {
                         .when().get(EndPoints.certificatesStatistics);
         response.then().statusCode(200)
                 .body("perCountry.name", hasItem("Finland"))
-                .body("perSource.name",hasItem("Wind"))
-                .body("perSource.count",greaterThan(1));
+                .body("perSource.name",hasItem("Wind"));
+               // .body("perSource.count",);
 
 
     }
