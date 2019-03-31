@@ -30,6 +30,7 @@ companiesController.CheckDeleteCompany();
 
 @Test
     public void checkSpecificCompany(){
-companiesController.getSpecificCompany(3011);
+    int companyID =companiesController.getAllCompanies();
+companiesController.getSpecificCompany(companyID);
 }
 }

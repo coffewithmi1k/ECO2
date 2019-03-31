@@ -17,11 +17,11 @@ public class CertificateStatisticsController extends Configuration {
     public void getCertificatesStatistics(){
         Response response =
                 given().header("Authorization", getToken())
-                        .when().get(EndPoints.certificatesStatistics);
+                        .when().get(EndPoints.certificatesStatistics).prettyPeek();
         response.then().statusCode(200)
                 .body("perCountry.name", hasItem("Finland"))
-                .body("perSource.name",hasItem("Wind"));
-               // .body("perSource.count",);
+                .body("perSource.name",hasItem("Wind"))
+               .body("perSource.count[0]",greaterThan(1));
 
 
     }

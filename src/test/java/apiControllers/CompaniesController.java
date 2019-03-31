@@ -4,10 +4,8 @@ import configuration.Configuration;
 import configuration.EndPoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import org.junit.experimental.theories.suppliers.TestedOn;
-import org.testng.annotations.Test;
 import resources.CompaniesJsons;
-import test.ExampleEndPoints;
+import static org.hamcrest.Matchers.*;
 
 import static io.restassured.RestAssured.given;
 
@@ -16,11 +14,15 @@ public class CompaniesController extends Configuration {
 CompaniesJsons companiesJsons = new CompaniesJsons();
 
     @Step("Get all Companies")
-    public void getAllCompanies() {
+    public int getAllCompanies() {
         Response response =
                 given().header("Authorization", getToken())
-                        .when().get(EndPoints.companies).prettyPeek();
-        response.then().statusCode(200);
+                        .when().get(EndPoints.companies);
+        response.then().statusCode(200)
+                .body("id[0]",greaterThan(1))
+                .body("name[0]",notNullValue());
+       int companyID =response.path("id[0]");
+       return companyID;
     }
 
     @Step("Create Company")
@@ -29,19 +31,11 @@ CompaniesJsons companiesJsons = new CompaniesJsons();
                 given().header("Authorization", getToken())
                         .body(body)
                         .when().post(EndPoints.companies);
-        response.then().statusCode(200);
+        response.then().statusCode(200)
+                .body(notNullValue());
 
     String  companyID = response.getBody().asString();
         return  companyID;
-    }
-
-    @Step("Edit Company")
-    public void editCompany(String body) {
-        Response response =
-                given().header("Authorization", getToken())
-                        .body(body)
-                        .when().put(EndPoints.companies);
-        response.then().statusCode(200);
     }
 
     @Step("Delete Company")
@@ -50,14 +44,16 @@ CompaniesJsons companiesJsons = new CompaniesJsons();
         Response response =
                 given().header("Authorization", getToken())
                         .when().delete(EndPoints.companies+companyID);
-        response.then().statusCode(200);
-System.out.println("Company is deleted with ID "+companyID);
+        response.then().statusCode(200)
+                .body(equalTo("true"));
     }
     @Step("Get specific company")
     public void getSpecificCompany(int ID){
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.companies+ID);
-        response.then().statusCode(200);
+        response.then().statusCode(200)
+                .body("id",greaterThan(0))
+                .body("name",notNullValue());
     }
 }

@@ -14,8 +14,9 @@ public class PortfolioGroupTest extends Configuration {
     public void checkGetAllPortfolioGroups(){
         portfolioGroupController.getAllPortfolioGroups();
     }
-    @Test
+    @Test(priority = 1)
     public void checkSpecificPortfolioGroup(){
-        portfolioGroupController.getSpecificPortfolioGroup(53);
+        int portfolioGroupID = portfolioGroupController.getAllPortfolioGroups();
+        portfolioGroupController.getSpecificPortfolioGroup(portfolioGroupID);
     }
 }

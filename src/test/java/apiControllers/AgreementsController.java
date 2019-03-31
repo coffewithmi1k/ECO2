@@ -2,7 +2,6 @@ package apiControllers;
 import configuration.EndPoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import org.json.JSONArray;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import resources.CompaniesJsons;
