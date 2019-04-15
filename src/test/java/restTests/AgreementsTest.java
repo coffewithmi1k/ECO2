@@ -18,7 +18,8 @@ CompaniesJsons companiesJsons = new CompaniesJsons();
     }
     @Test
     public void checkSpecificAgreement(){
-        agreementsController.getSpecificAgreement(213);
+        int agreementID = agreementsController.getAllAgreeements();
+        agreementsController.getSpecificAgreement(agreementID);
     }
     @Test
     public void checkCreateAgreement(){

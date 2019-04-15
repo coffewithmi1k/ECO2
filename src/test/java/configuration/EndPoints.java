@@ -19,4 +19,8 @@ public class EndPoints {
     public final static String productionDevices = "productiondevices/";
     public final static String portfolioGroups = "groups/";
     public final static String audit = "audit";
+    public final static String classification = "classification/";
+    public final static String healthCheck = "health";
+    public final static String lookUp = "lookupitems";
+
 }

@@ -13,12 +13,14 @@ public class LabelsController extends Configuration {
     CompaniesJsons companiesJsons = new CompaniesJsons();
 
     @Step("get all labels")
-    public void getAllLabels(){
+    public int getAllLabels(){
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.labels);
         response
                 .then().statusCode(200);
+        int labelID = response.path("id[0]");
+        return labelID;
 
     }
     @Step("Get specific label")

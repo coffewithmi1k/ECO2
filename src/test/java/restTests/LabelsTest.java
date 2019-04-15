@@ -16,7 +16,8 @@ public class LabelsTest extends Configuration {
 
     @Test
     public void checkSpecificLabel(){
-        labelsController.getSpecificLabel(29);
+        int labelID = labelsController.getAllLabels();
+        labelsController.getSpecificLabel(labelID);
     }
     @Test
     public void checkCreateNewLabel(){

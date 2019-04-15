@@ -20,14 +20,16 @@ public class AgreementsController extends Configuration {
 
 
     @Step("Get all agreements")
-    public void getAllAgreeements(){
+    public int getAllAgreeements(){
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.agreements);
-        response.then().statusCode(200).body("id[0]", equalTo(212))
-                .body("id", hasItems(212,214))
+        response.then().statusCode(200)
+                .body("id", hasItems(222,224))
                 .body("vendorID", hasItems(3018))
                 .body("vendor.name",hasItems("Ecohz AS"));
+        int agreementID =response.path("id[0]");
+        return agreementID;
 
     }
     @Step("Get specific agreement")
