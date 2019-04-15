@@ -22,5 +22,6 @@ public class EndPoints {
     public final static String classification = "classification/";
     public final static String healthCheck = "health";
     public final static String lookUp = "lookupitems";
+    public final static String positionsData = "positionsData/";
 
 }
