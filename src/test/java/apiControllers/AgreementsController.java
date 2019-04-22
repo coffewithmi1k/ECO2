@@ -23,7 +23,7 @@ public class AgreementsController extends Configuration {
     public int getAllAgreeements(){
         Response response =
                 given().header("Authorization", getToken())
-                        .when().get(EndPoints.agreements);
+                        .when().get(EndPoints.agreements).prettyPeek();
         response.then().statusCode(200)
                 .body("id", hasItems(222,224))
                 .body("vendorID", hasItems(3018))
@@ -39,8 +39,6 @@ public class AgreementsController extends Configuration {
                         .when().get(EndPoints.agreements+id);
         response.then().statusCode(200)
                 .body("id", equalTo(213))
-                .body("vendorID",equalTo(3018))
-                .body("vendor.name",equalTo("21.03CoffeCompany"))
                 .body("vendorAgreementsProductionDevices.productionDeviceID",hasItem(29677));
 
     }
