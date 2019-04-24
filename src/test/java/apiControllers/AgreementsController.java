@@ -23,7 +23,7 @@ public class AgreementsController extends Configuration {
     public int getAllAgreeements(){
         Response response =
                 given().header("Authorization", getToken())
-                        .when().get(EndPoints.agreements).prettyPeek();
+                        .when().get(EndPoints.agreements);
         response.then().statusCode(200)
                 .body("id", hasItems(222,224))
                 .body("vendorID", hasItems(3018))
