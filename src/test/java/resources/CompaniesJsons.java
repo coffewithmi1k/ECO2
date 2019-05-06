@@ -330,5 +330,18 @@ public String addNewProductionDevice(){
             "}";
     return addNewProductionDevice;
 }
+public String editSalesData(){
+    String salesDataJson = "[\n" +
+            "  {\n" +
+            "    \"id\": 244,\n" +
+            "    \"year\": 2019,\n" +
+            "    \"feeType\": 2,\n" +
+            "    \"itemType\": 9,\n" +
+            "    \"sum\": 13,\n" +
+            "    \"volume\": 0\n" +
+            "  }\n" +
+            "]";
+    return  salesDataJson;
+}
 
 }
