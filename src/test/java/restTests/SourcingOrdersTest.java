@@ -15,7 +15,8 @@ public class SourcingOrdersTest extends Configuration {
     }
     @Test
     public void checkSpecificSourcingOrder(){
-        sourcingOrdersController.getSpecificOrder(10917);
+        int sourcingOrderID = sourcingOrdersController.getAllSourcingOrders();
+        sourcingOrdersController.getSpecificOrder(sourcingOrderID);
     }
     @Test
     public void checkCreateNewSourcingOrder(){

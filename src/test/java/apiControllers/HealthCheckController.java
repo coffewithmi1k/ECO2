@@ -15,7 +15,7 @@ public class HealthCheckController extends Configuration {
         Response response =
                 given().header("Authorization", getToken())
                         .param("apikey","297591fe-e700-455f-a076-b13d2161ec3d")
-                        .when().get(EndPoints.healthCheck).prettyPeek();
+                        .when().get(EndPoints.healthCheck);
         response.then()
                 .statusCode(200)
                 .body("results.check[0].message",equalTo("Database connected"))

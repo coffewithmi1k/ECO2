@@ -33,7 +33,7 @@ public class PositionDataController extends Configuration {
         Response response =
                 given().header("Authorization", getToken())
                         .params("startYear","2018","endYear","2019")
-                        .when().get(EndPoints.positionsData+"portfolio").prettyPeek();
+                        .when().get(EndPoints.positionsData+"portfolio");
         response.then()
                 .statusCode(200);
     }

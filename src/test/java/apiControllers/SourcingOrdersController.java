@@ -12,12 +12,14 @@ public class SourcingOrdersController extends Configuration {
     CompaniesJsons companiesJsons = new CompaniesJsons();
 
     @Step("Get all Sourcing Orders")
-    public void getAllSourcingOrders(){
+    public int getAllSourcingOrders(){
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.sourcingOrders);
         response
                 .then().statusCode(200);
+        int sourcingOrderId = response.path("id[0]");
+        return sourcingOrderId;
     }
 
     @Step("Get Specific Sourcing Order")

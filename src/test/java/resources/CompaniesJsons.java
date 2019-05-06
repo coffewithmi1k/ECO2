@@ -22,7 +22,7 @@ public String getAddNewCompany() {
 public String getNewFact(){
     String addNewFact ="{\n" +
             "  \"factName\": \"Coffe"+getDate()+"\",\n" +
-            "  \"valueType\": \"Number\",\n" +
+            "  \"valueType\": \"Whole Number\",\n" +
             "  \"applicableTechnologyCodes\": null,\n" +
             "  \"applicableFuelCodes\": null\n" +
             "}";

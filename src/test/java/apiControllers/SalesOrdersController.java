@@ -13,12 +13,14 @@ public class SalesOrdersController extends Configuration {
 
 
     @Step("Get all sales Orders")
-    public void getAllSalesOrders() {
+    public int getAllSalesOrders() {
         Response response =
                 given().header("Authorization", getToken())
                         .when().get(EndPoints.salesOrders);
         response
                 .then().statusCode(200);
+        int salesOrderID = response.path("id[0]");
+        return salesOrderID;
     }
 
     @Step("Get specific sales order")

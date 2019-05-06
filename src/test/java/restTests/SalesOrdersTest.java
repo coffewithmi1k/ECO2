@@ -16,7 +16,8 @@ public class SalesOrdersTest extends Configuration {
 
     @Test
     public void checkSpecificSalesOrder() {
-        salesOrdersController.getSpecificOrder(41787);
+        int salesOrderID = salesOrdersController.getAllSalesOrders();
+        salesOrdersController.getSpecificOrder(salesOrderID);
     }
 
     @Test
