@@ -25,5 +25,6 @@ public class EndPoints {
     public final static String positionsData = "positionsData/";
     public final static String products = "products/";
     public final static String salesData = "salesdata/";
+    public final static String portfolioStatus = "portfolio/status/";
 
 }
